@@ -1,0 +1,206 @@
+/* A restrained, text-first academic homepage. */
+:root {
+  --text: #222;
+  --muted: #666;
+  --link: #245b83;
+  --rule: #e5e5e5;
+  --page-width: 790px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--text);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.62;
+}
+
+.page {
+  width: min(var(--page-width), calc(100% - 48px));
+  margin: 54px auto 36px;
+}
+
+/* Header */
+
+.site-header {
+  margin-bottom: 30px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.05rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.position {
+  margin: 5px 0 13px;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+/* Profile photo */
+
+.profile-photo {
+  display: block;
+  width: 165px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 19px;
+  margin-top: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.88rem;
+}
+
+/* Links */
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
+
+section {
+  padding-top: 25px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 1.28rem;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0 0 3px;
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 12px;
+}
+
+ul {
+  margin: 7px 0 0;
+  padding-left: 22px;
+}
+
+li {
+  margin: 3px 0;
+}
+
+.section-note {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+/* Selected work */
+
+.work-item {
+  margin: 15px 0 0;
+}
+
+.work-item p {
+  margin: 2px 0 0;
+  color: #444;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 38px;
+  padding-top: 13px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+  .page {
+    width: calc(100% - 36px);
+    margin-top: 30px;
+  }
+
+  .header-content {
+    gap: 18px;
+  }
+
+  .profile-photo {
+    width: 110px;
+    height: 140px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  .position {
+    font-size: 0.94rem;
+  }
+
+  nav {
+    gap: 7px 13px;
+    font-size: 0.82rem;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-content {
+    gap: 12px;
+  }
+
+  .profile-photo {
+    width: 90px;
+    height: 120px;
+  }
+
+  h1 {
+    font-size: 1.45rem;
+  }
+}
